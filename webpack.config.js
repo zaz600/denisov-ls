@@ -7,6 +7,17 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const RobotstxtPlugin = require("robotstxt-webpack-plugin");
+
+const options = {
+  filePath: "robots.txt",
+  policy: [
+    {
+      userAgent: "*",
+      disallow: "/",
+    },
+  ],
+};
 
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
@@ -59,7 +70,9 @@ module.exports = (env, argv) => {
         loader: "svgo-loader",
         options: {
           plugins: [
-            { removeTitle: true },
+            {
+              removeTitle: true,
+            },
             {
               removeAttrs: {
                 attrs: "(fill|stroke)",
@@ -116,6 +129,7 @@ module.exports = (env, argv) => {
       hints: false,
     },
     plugins: [
+      new RobotstxtPlugin(options),
       new HtmlWebpackPlugin({
         template: "src/index.pug",
         chunks: ["main"],
@@ -125,7 +139,9 @@ module.exports = (env, argv) => {
         filename: "admin/index.html",
         chunks: ["admin"],
       }),
-      new SpriteLoaderPlugin({ plainSprite: true }),
+      new SpriteLoaderPlugin({
+        plainSprite: true,
+      }),
       new VueLoaderPlugin(),
     ],
     devtool: "#eval-source-map",
