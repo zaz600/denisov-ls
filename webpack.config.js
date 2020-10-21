@@ -21,7 +21,7 @@ const options = {
 
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
-  const publicPath = "/";
+  const publicPath = "/denisov-ls/";
 
   const pcss = {
     test: /\.(p|post|)css$/,
