@@ -3,7 +3,7 @@ extends ./main.layout.pug
 block content
   .welcome-section
     section.hero
-      .container
+      .container.hero__container
         header.header
           a.logo(href="#") ВА
           nav.menu
@@ -20,8 +20,8 @@ block content
                   +icon(item, "socials__icon")
         
         .userinfo
-          .userinfo__title Личный сайт веб разработчика
-          .userinfo__name Владимир Астахов
+          .userinfo__title Личный сайт #[br] веб разработчика
+          .userinfo__name Владимир Астаханов
 
         .hero__downbutton
           .scroll-down
