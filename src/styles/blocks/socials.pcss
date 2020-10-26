@@ -7,6 +7,9 @@
       border: 1px solid currentColor;
       border-radius: 50%;
       margin-right: 19px;
+      &:hover {
+        color: $hover-dark-bg-color;
+      }
     }
     .socials__link {
       display: block;
@@ -22,9 +25,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-
       &:hover {
-        fill: #ff9a00;
+        fill: $hover-dark-bg-color;
       }
     }
   }
@@ -43,6 +45,6 @@
   fill: $text-color;
 
   &:hover {
-    fill: #5500f2;
+    fill: $hover-light-bg-color;
   }
 }

@@ -35,6 +35,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  &:hover {
+    color: $hover-light-bg-color;
+  }
+  &:hover:before {
+    background: svg-load("arrow-down.svg", fill=$hover-light-bg-color) center
+      center / contain no-repeat;
+  }
+
   &_prev {
     &:before {
       transform: translate(-50%, -50%) rotate(-180deg);

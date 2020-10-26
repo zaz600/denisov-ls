@@ -2,6 +2,8 @@
   "text-color": "#414c63",
   "links-color": "#4b6fd7",
   "errors-color": "#cd1515",
+  "hover-light-bg-color": "#5500f2",
+  "hover-dark-bg-color": "#FF9A00",
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
   "bp-tablets": "768px",

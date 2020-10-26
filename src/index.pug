@@ -5,7 +5,7 @@ block content
     section.hero
       .container.hero__container
         header.header
-          a.logo(href="#") ВА
+          a.logo(href="#") ДД
           nav.menu
             - var menuItems = ["Обо мне", "Навыки", "Работы", "Отзывы"]
             ul.menu__list
@@ -16,12 +16,12 @@ block content
           ul.socials
             each item in socials
               li.socials__item
-                a(href="#").socials__link
+                a(href="#" target="_blank").socials__link
                   +icon(item, "socials__icon")
         
         .userinfo
           .userinfo__title Личный сайт #[br] веб разработчика
-          .userinfo__name Владимир Астаханов
+          .userinfo__name Дмитрий Денисов
 
         .hero__downbutton
           .scroll-down
@@ -37,9 +37,9 @@ block content
               .user__about
                 - 
                   var userinfo = [
-                    ['Проживаю:', "Новосибирск"],
-                    ['Возраст:', "27 лет"],
-                    ['Родился:', "1 января 1991"],
+                    ['Проживаю:', "Санкт-Петербург"],
+                    ['Возраст:', "38 лет"],
+                    ['Родился:', "12 декабря 1981"],
                   ];
                 table.user__table
                   each item in userinfo
@@ -49,7 +49,7 @@ block content
           .about__user-text
             .about__main-text-content
               .about__desc Привет, меня зовут
-              .about__title Владимир Астаханов
+              .about__title Дмитрий Денисов
               .about__text-info
                 p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
             .about__ps
@@ -164,7 +164,7 @@ block content
         .footer__copyright-col
           .footer__copyright-year &copy; 2020
         .footer__copyright-userinfo
-          .footer__copyright-name Владимир Астаханов
+          .footer__copyright-name Дмитрий Денисов
           .footer__data-text Личный сайт веб - разработчика
           
       .footer__data
