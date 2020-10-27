@@ -5,34 +5,31 @@
 }
 
 .works-slider__pics {
-  width: 975px;
+  width: calc(975px + 160px);
+  padding-right: 160px;
   position: relative;
-  z-index: 10;
   height: 600px;
+  z-index: 10;
 
   &:before {
     content: attr(data-slide);
     position: absolute;
-    top: 50%;
-    transform: translateY(-60%);
     line-height: 1;
-    left: 100%;
+    left: 1000px;
     font-size: 400px;
     font-weight: 800;
-    margin-left: -8%;
-    color: rgba($text-color, 0.05);
+    color: #dde3ec;
+    z-index: -1;
+    top: 0;
+    transform: translateY(10%);
+    margin-left: -9%;
   }
 }
 
 .works-slider__pics-content {
+  width: 975px;
   display: flex;
   flex-direction: column;
-  /* z-index: 10;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%; */
 }
 
 .works-slider__fullpic-container {
@@ -51,7 +48,7 @@
 
 .works-slider__thumbs {
   position: absolute;
-  right: 2px;
+  right: 162px;
   bottom: 57px;
   width: 178px;
 }
@@ -59,6 +56,7 @@
 .works-slider__thumb-item {
   height: 100px;
   transition: 0.2s;
+
   &.active,
   &:hover {
     outline: 3px solid #f29400;
@@ -79,16 +77,17 @@
 .works-slider__btn {
   width: 50px;
   height: 50px;
-  background: #2d3c4e;
+  background: #252830;
   display: block;
   position: relative;
+
   &:before {
     content: "";
     background: svg-load("arrow-down.svg", fill=#fff, width=100%, height=100%)
       center center no-repeat;
     display: block;
-    width: 8px;
-    height: 10px;
+    width: 17px;
+    height: 17px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -96,21 +95,25 @@
     transition: opacity 0.3s, margin-top 0.3s;
     opacity: 0.3;
   }
+
   &:hover {
     &:before {
       opacity: 1;
     }
   }
+
   &_prev {
     &:before {
       transform: translate(-50%, -50%) rotate(-270deg);
     }
+
     &:active {
       &:before {
         margin-top: 3px;
       }
     }
   }
+
   &_next {
     &:active {
       &:before {
@@ -121,7 +124,7 @@
 }
 
 .works-slider__data {
-  width: 24%;
+  width: 34%;
 }
 
 .works-slider__thumb-link {
@@ -158,30 +161,7 @@
 
 .works-slider__link {
   display: block;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: 0.3s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-enter-to {
-  opacity: 1;
-}
-
-.fade-leave {
-  opacity: 1;
-}
-
-.fade-leave-to {
-  opacity: 0;
+  &:hover {
+    text-decoration-line: underline;
+  }
 }
